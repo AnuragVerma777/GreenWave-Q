@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+outputs/*_cleancheck/
+Quantum_Traffic_Gridlock_Final_QC.pdf.pdf

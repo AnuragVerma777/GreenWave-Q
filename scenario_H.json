@@ -1,0 +1,12 @@
+{
+  "name": "H",
+  "arrivals": {
+    "A": {"NS": [7, 6, 8, 5], "EW": [1, 2, 3, 1]},
+    "B": {"NS": [2, 7, 3, 6], "EW": [8, 5, 7, 4]}
+  },
+  "service_capacity": 5,
+  "storage_capacity": 6,
+  "overflow_weight": 4,
+  "switch_weight": 0.5,
+  "link": {"from": "A", "to": "B", "phase": "EW", "fraction": 0.6}
+}
