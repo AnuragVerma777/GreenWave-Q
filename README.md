@@ -19,11 +19,10 @@ python -m pip install -r requirements.txt
 
 ## Run the pipeline and find its outputs
 
-The CLI syntax is `python run.py --scenario <json> --seed <int> --out <dir>`; write `--scenario` without a space after the two hyphens. The saved main R run uses seed 1. The proposed H run also uses seed 1 to match R.
+The CLI syntax is `python run.py --scenario <json> --seed <int> --out <dir>`; write `--scenario` without a space after the two hyphens. The saved main R run uses seed 1. 
 
 ```bash
 python run.py --scenario scenario_R.json --seed 1 --out outputs/R
-python run.py --scenario scenario_H.json --seed 1 --out outputs/H
 ```
 
 The required files for each scenario are:
@@ -31,7 +30,6 @@ The required files for each scenario are:
 | Scenario | QUBO | Bound circuit | Raw counts | Decoded schedule |
 |---|---|---|---|---|
 | R | `outputs/R/qubo.json` | `outputs/R/circuit.qasm` | `outputs/R/counts.json` | `outputs/R/schedule.json` |
-| H | `outputs/H/qubo.json` | `outputs/H/circuit.qasm` | `outputs/H/counts.json` | `outputs/H/schedule.json` |
 
 Each run directory also contains `parameters.json` (selected QAOA angles and Ising scale) and `baselines.json` (scenario baseline costs). `outputs/R/seed_<n>/` holds the independent Block 6 runs for seeds 1, 7, 21, 42, and 101.
 
@@ -41,7 +39,6 @@ Score the saved main schedule:
 
 ```bash
 python scorer.py --scenario scenario_R.json --schedule outputs/R/schedule.json
-python scorer.py --scenario scenario_H.json --schedule outputs/H/schedule.json
 ```
 
 ## Tests and experiment tables
@@ -56,7 +53,6 @@ The deterministic main run and five-seed Block 6 metrics can be recreated with:
 
 ```bash
 python run.py --scenario scenario_R.json --seed 1 --out outputs/R
-python run.py --scenario scenario_H.json --seed 1 --out outputs/H
 python block6_metrics.py --scenario scenario_R.json --seed 1 7 21 42 101 --out outputs/R
 ```
 
@@ -74,7 +70,7 @@ The QAOA depth calibration and Ising-scale comparison are reproducible with `pyt
 
 ## Scenarios and reports
 
-`scenario_R.json` is the official R scenario. `scenario_H.json` and `outputs/H/` use a locally proposed hidden-range parameter set because the supplied problem statement does not include official H values. Do not represent this proposed H as the official released scenario. The unchanged CLI also accepts other scenario files, including generated hidden-range examples in `outputs/block7/random_bank/`.
+`scenario_R.json` is the supplied R scenario. No H scenario is included. The unchanged CLI also accepts other scenario files, including generated hidden-range examples in `outputs/block7/random_bank/`.
 
 - `report/report.pdf`: three-page technical report.
 - `report/ai_disclosure.pdf`: separate one-page disclosure; the author confirmation boxes are intentionally left blank.
@@ -97,9 +93,7 @@ block7_ablation.py             Ablation and random-scenario generalization runs
 calibrate_*.py                 Fixed-seed calibration experiments
 scale_ablation.py              Ising cost-scale comparison experiment
 scenario_R.json                Official R input
-scenario_H.json                Proposed hidden-range H test input
 outputs/R/                     Designated main run and five seed_<n> runs
-outputs/H/                     Proposed H run (seed 1)
 outputs/block7/                Ablation, random scenarios, and generalization artifacts
 docs/                          Derivation and checkpoint evidence
 report/                         Technical report, disclosure, and PDF builder
