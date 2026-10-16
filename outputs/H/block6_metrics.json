@@ -1,0 +1,156 @@
+{
+  "scenario": "H",
+  "scenario_file": "C:\\Users\\anurag\\PROJECTS\\qc iit hackathon\\scenario_H-1.json",
+  "seeds": [
+    1,
+    7,
+    21,
+    42,
+    101
+  ],
+  "definitions": {
+    "C_star": "minimum official cost over all 256 schedules",
+    "C_rand": "uniform mean official cost over all 256 schedules",
+    "E_Q": "mean official cost weighted by raw QAOA counts (4,096 shots)",
+    "elite": "13 lowest official-cost schedules, ties by ascending bitstring",
+    "elite_enrichment": "elite shot fraction divided by 13/256",
+    "lift_clipped": "per-seed lift clipped to [0,1]",
+    "hybrid": "best official-cost schedule among sampled bitstrings, across listed seeds"
+  },
+  "C_star": 234.0,
+  "C_rand": 300.28125,
+  "qubo_exact_minimizer": {
+    "bits": "10010110",
+    "qubo_energy": 201.76666666666665,
+    "official_cost": 236.0
+  },
+  "per_seed": [
+    {
+      "seed": 1,
+      "shots": 4096,
+      "E_Q": 281.20361328125,
+      "lift": 0.28782855964167847,
+      "lift_clipped": 0.28782855964167847,
+      "elite_shots": 502,
+      "elite_fraction": 0.12255859375,
+      "elite_enrichment": 2.4134615384615383,
+      "raw_most_frequent_bits": "10000110",
+      "raw_most_frequent_official_cost": 235.0,
+      "hybrid_bits": "10000111",
+      "hybrid_official_cost": 234.0,
+      "optimizer_evaluations": 61,
+      "runtime_seconds": 0.23838560000001507
+    },
+    {
+      "seed": 7,
+      "shots": 4096,
+      "E_Q": 281.055908203125,
+      "lift": 0.2900570190947666,
+      "lift_clipped": 0.2900570190947666,
+      "elite_shots": 482,
+      "elite_fraction": 0.11767578125,
+      "elite_enrichment": 2.3173076923076925,
+      "raw_most_frequent_bits": "01010110",
+      "raw_most_frequent_official_cost": 262.0,
+      "hybrid_bits": "10000111",
+      "hybrid_official_cost": 234.0,
+      "optimizer_evaluations": 82,
+      "runtime_seconds": 0.2577823000000308
+    },
+    {
+      "seed": 21,
+      "shots": 4096,
+      "E_Q": 280.417724609375,
+      "lift": 0.2996854372937294,
+      "lift_clipped": 0.2996854372937294,
+      "elite_shots": 500,
+      "elite_fraction": 0.1220703125,
+      "elite_enrichment": 2.4038461538461537,
+      "raw_most_frequent_bits": "00110110",
+      "raw_most_frequent_official_cost": 252.0,
+      "hybrid_bits": "10000111",
+      "hybrid_official_cost": 234.0,
+      "optimizer_evaluations": 69,
+      "runtime_seconds": 0.23753959999999097
+    },
+    {
+      "seed": 42,
+      "shots": 4096,
+      "E_Q": 281.15478515625,
+      "lift": 0.28856524045261667,
+      "lift_clipped": 0.28856524045261667,
+      "elite_shots": 502,
+      "elite_fraction": 0.12255859375,
+      "elite_enrichment": 2.4134615384615383,
+      "raw_most_frequent_bits": "01010110",
+      "raw_most_frequent_official_cost": 262.0,
+      "hybrid_bits": "10000111",
+      "hybrid_official_cost": 234.0,
+      "optimizer_evaluations": 64,
+      "runtime_seconds": 0.21198340000000826
+    },
+    {
+      "seed": 101,
+      "shots": 4096,
+      "E_Q": 280.814453125,
+      "lift": 0.2936999057048562,
+      "lift_clipped": 0.2936999057048562,
+      "elite_shots": 485,
+      "elite_fraction": 0.118408203125,
+      "elite_enrichment": 2.331730769230769,
+      "raw_most_frequent_bits": "00110110",
+      "raw_most_frequent_official_cost": 252.0,
+      "hybrid_bits": "10000111",
+      "hybrid_official_cost": 234.0,
+      "optimizer_evaluations": 52,
+      "runtime_seconds": 0.19752649999998084
+    }
+  ],
+  "minimum_lift_clipped": 0.28782855964167847,
+  "comparison": [
+    {
+      "method": "Best alternating",
+      "schedule": "10100101",
+      "official_cost": 261.0
+    },
+    {
+      "method": "Greedy (ties to NS)",
+      "schedule": "10100111",
+      "official_cost": 244.0
+    },
+    {
+      "method": "Exact enumeration",
+      "schedule": "10000111",
+      "official_cost": 234.0
+    },
+    {
+      "method": "Uniform-random mean",
+      "schedule": "\u2014",
+      "official_cost": 300.28125
+    },
+    {
+      "method": "Exact QUBO minimizer (officially scored)",
+      "schedule": "10010110",
+      "official_cost": 236.0,
+      "qubo_energy": 201.76666666666665
+    },
+    {
+      "method": "QAOA raw samples (mean E_Q, 5 seeds)",
+      "schedule": "4,096 samples/seed",
+      "official_cost": 280.929296875,
+      "min_seed_E_Q": 280.417724609375,
+      "max_seed_E_Q": 281.20361328125
+    },
+    {
+      "method": "Hybrid (best official cost among all sampled bitstrings)",
+      "schedule": "10000111",
+      "official_cost": 234.0,
+      "seed": 1
+    }
+  ],
+  "hybrid_best": {
+    "bits": "10000111",
+    "official_cost": 234.0,
+    "seed": 1
+  }
+}
