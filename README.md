@@ -110,3 +110,8 @@ AI_USAGE_LOG.md                 Existing AI-use record
 
 
 
+
+## Public GitHub repository
+
+https://github.com/AnuragVerma777/GreenWave-Q
+

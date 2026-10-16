@@ -1,0 +1,11 @@
+{
+  "seed": 20261017,
+  "count": 4,
+  "scenario_files": [
+    "outputs\\block7\\random_bank\\G001.json",
+    "outputs\\block7\\random_bank\\G002.json",
+    "outputs\\block7\\random_bank\\G003.json",
+    "outputs\\block7\\random_bank\\G004.json"
+  ],
+  "generation": "calibrate_surrogate.sample_scenario; arrivals 0..8, capacity 4..6, storage 5..8, weights and link values per that generator"
+}

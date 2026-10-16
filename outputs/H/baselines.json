@@ -1,0 +1,57 @@
+{
+  "alternating": {
+    "schedule": "10100101",
+    "cost": 256.0
+  },
+  "greedy": {
+    "schedule": "11110100",
+    "cost": 163.0
+  },
+  "best_enumeration": {
+    "schedule": "11110100",
+    "cost": 163.0
+  },
+  "uniform_random_expected_cost": 314.53125,
+  "top_10": [
+    {
+      "schedule": "11110100",
+      "cost": 163.0
+    },
+    {
+      "schedule": "11110101",
+      "cost": 163.5
+    },
+    {
+      "schedule": "11110011",
+      "cost": 166.5
+    },
+    {
+      "schedule": "11110010",
+      "cost": 167.0
+    },
+    {
+      "schedule": "11110001",
+      "cost": 170.5
+    },
+    {
+      "schedule": "11110000",
+      "cost": 178.0
+    },
+    {
+      "schedule": "11110110",
+      "cost": 179.0
+    },
+    {
+      "schedule": "11100100",
+      "cost": 179.5
+    },
+    {
+      "schedule": "11100101",
+      "cost": 180.0
+    },
+    {
+      "schedule": "11100011",
+      "cost": 183.0
+    }
+  ]
+}

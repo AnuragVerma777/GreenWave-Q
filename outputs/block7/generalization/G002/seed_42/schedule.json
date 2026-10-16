@@ -1,0 +1,40 @@
+{
+  "bits": "10100101",
+  "bit_order": "A1,A2,A3,A4,B1,B2,B3,B4 (left-to-right schedule order)",
+  "raw_qaoa": {
+    "most_frequent": {
+      "bits": "10100101",
+      "count": 83,
+      "qubo_energy": 143.6898995304146
+    },
+    "lowest_qubo_energy": {
+      "bits": "10100110",
+      "count": 58,
+      "qubo_energy": 140.85120986747998
+    }
+  },
+  "hybrid": {
+    "label": "Best official-cost schedule among sampled bitstrings",
+    "bits": "10100111",
+    "count": 41,
+    "official_cost": 154.22095212844275
+  },
+  "optimizer": {
+    "name": "COBYLA",
+    "seed": 42,
+    "evaluations": 77,
+    "initialization": "linear layer ramp with seeded uniform jitter \u00b10.01",
+    "evaluation_cap": 300,
+    "success": true,
+    "message": "Return from COBYLA because the trust region radius reaches its lower bound."
+  },
+  "qaoa": {
+    "p": 1,
+    "p_default_rationale": "Fixed p=1; see docs/qaoa_ablation.md",
+    "ising_constant": 178.2395481657328,
+    "hamiltonian_scale": 23.70414356530503,
+    "ising_max_assignment_error": 5.684341886080802e-14,
+    "shots": 4096,
+    "seed": 42
+  }
+}
